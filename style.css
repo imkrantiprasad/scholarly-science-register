@@ -73,6 +73,15 @@ body {
   z-index: 1;
 }
 
+form {
+  margin-top: 30px;
+}
+
+.f-head {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .btn-div {
   margin: auto;
 }
@@ -151,4 +160,5 @@ body {
     width: 90% !important;
     margin: auto !important;
   }
+
 }
