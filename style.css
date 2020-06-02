@@ -16,9 +16,47 @@ body {
     /* border: 1px solid red; */
 }
 
+.big-circle {
+    height: 180px;
+    width: 180px;
+    background-color: rgba(172, 210, 235, 0.5);
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    z-index: 0;
+}
+
+.small-circle {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(172, 210, 235, 0.5);
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    z-index: 0;
+}
+
+#circle-1 {
+    margin-top: -40px;
+    margin-left: 900px;
+    overflow-x: hidden;
+}
+
+#circle-2 {
+    /* margin-top: -40px; */
+    margin-left: -120px;
+}
+
+#circle-3 {
+    margin-left: 900px;
+
+}
+
+#circle-4 {
+    margin-left: 20px;
+    ;
+}
+
 .img-container {
     text-align: center;
-
     margin-top: 100px;
 }
 
@@ -37,7 +75,8 @@ body {
 }
 
 .form-container {
-    margin-top: 50px;
+    margin-top: -90px;
+    z-index: 1;
 }
 
 .btn-div {
@@ -64,9 +103,37 @@ body {
 }
 
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #circle-1 {
+        margin-left: 600px !important;
+        /* display: none !important; */
+    }
+
+    #circle-3 {
+        margin-left: 600px !important;
+    }
+}
 
 @media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .form-container {
+        margin-top: -200px !important;
+    }
+
+    #circle-1 {
+        display: none;
+    }
+
+    #circle-3 {
+        display: none;
+    }
 
     /* For mobile phones: */
     .img-container {
@@ -81,6 +148,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
 
     .img-container {
         display: none;
