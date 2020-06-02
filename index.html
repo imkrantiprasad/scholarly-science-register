@@ -2,14 +2,16 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="pidie-0.0.8.css" />
+    <!-- <link rel="stylesheet" href="pidie-0.0.8.css" /> -->
+    <link rel="stylesheet" href="css/intlTelInput.css" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="path/to/intlTelInput.css" />
+    <!-- <link rel="stylesheet" href="path/to/intlTelInput.css" /> -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -59,18 +61,15 @@
                 <input type="email" class="form-control" id="email" />
               </div>
               <div class="form-group col-md-2"></div>
-
-              <div class="form-group col-md-5">
+              <div class="form-group col-md-5 x">
                 <label for="tel">Mobile Number</label>
-                <div class="pd-telephone-input">
-                  <input
-                    type="tel"
-                    id="tel"
-                    class="form-control"
-                    maxlength="16"
-                    pattern="[0-9]"
-                  />
-                </div>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                  size="50"
+                />
               </div>
             </div>
             <div class="form-row">
@@ -118,9 +117,24 @@
         </div>
       </div>
     </div>
-    <script src="pidie-0.0.8.js"></script>
+
+    <!-- Use as a jQuery plugin -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/intlTelInput.js"></script>
     <script>
-      new Pidie();
+      var input = document.querySelector("#phone");
+      intlTelInput(input, {
+        initialCountry: "IN",
+        geoIpLookup: function (success, failure) {
+          $.get("https://ipinfo.io", function () {}, "jsonp").always(function (
+            resp
+          ) {
+            var countryCode = resp && resp.country ? resp.country : "";
+            success(countryCode);
+          });
+        },
+        utilsScript: "js/utils.js",
+      });
     </script>
   </body>
 </html>
