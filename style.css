@@ -144,6 +144,18 @@ form {
     display: none;
   }
 
+  .sdate {
+    width: 45% !important;
+  }
+
+  .edate {
+    width: 45% !important;
+  }
+
+  .dateGap {
+    width: 10% !important;
+  }
+
   /* For mobile phones: */
   .img-container {
     display: none;
