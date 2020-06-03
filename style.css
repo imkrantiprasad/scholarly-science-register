@@ -82,6 +82,8 @@ form {
 
 .btn-div {
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .button {
@@ -152,7 +154,9 @@ form {
   .img-container {
     display: none;
   }
-
+  .img-text {
+    display: none;
+  }
   .right {
     margin: auto;
   }
