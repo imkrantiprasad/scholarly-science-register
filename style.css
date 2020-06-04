@@ -92,13 +92,9 @@ form {
   padding: 10px 0px;
   width: 180px;
   border-radius: 25px;
-  /* position: relative; */
-  transition: 0.5s;
 }
 .button:hover {
-  /* background: red !important; */
-  background: linear-gradient(to right, #8ff3fa 0%, #7066ff 100%);
-  /* transition: 0.9s; */
+  background: linear-gradient(to right, #66ffff 0%, #0066cc 100%);
 }
 
 .button:focus,
