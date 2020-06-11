@@ -11,6 +11,8 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "Arimo", sans-serif !important;
+  width: 94%;
+  margin-left: 3%;
 }
 
 .big-circle {
@@ -94,6 +96,7 @@ form {
   width: 180px;
   border-radius: 25px;
 }
+
 .button:hover {
   background: linear-gradient(to right, #66ffff 0%, #0066cc 100%);
 }
@@ -154,9 +157,11 @@ form {
   .img-container {
     display: none;
   }
+
   .img-text {
     display: none;
   }
+
   .right {
     margin: auto;
   }
